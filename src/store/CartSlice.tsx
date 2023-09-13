@@ -192,10 +192,16 @@ const cartSlice = createSlice({
       if (existingItem !== undefined) {
         if (existingItem?.qty === 1) {
           state.product = state.product.filter((item) => item.id !== id);
+          state.totalPrice -= existingItem.price;
         } else {
           existingItem.qty--;
+          state.totalPrice -= existingItem.price;
         }
       }
+    },
+    resetCart(state) {
+      state.product = productInitialState;
+      state.totalPrice = 0;
     },
   },
 });

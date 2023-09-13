@@ -20,7 +20,6 @@ const CartProduct = ({ id, img, name, qty, price }: CartType) => {
       showCancelButton: true,
       confirmButtonText: "Yes",
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         Swal.fire("Removed!", "", "success");
         dispatch(cartActions.removeCart(id));
