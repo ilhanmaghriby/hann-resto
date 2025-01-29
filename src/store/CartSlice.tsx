@@ -1,8 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
-import nasiGorengKampung from "../assets/img/nasi-goreng-kampung.jpeg";
-import nasiGoreng from "../assets/img/nasi-goreng.jpeg";
-import doubleBurger from "../assets/img/double-burger.jpeg";
-import beefBurgerDeluxe from "../assets/img/beef-burger.jpeg";
+import nasiGorengKampung from "../assets/img/nasi-goreng-kampung.webp";
+import nasiGoreng from "../assets/img/nasi-goreng.webp";
+import doubleBurger from "../assets/img/double-burger.webp";
+import beefBurgerDeluxe from "../assets/img/beef-burger.webp";
+import iceCreamOreo from "../assets/img/oreo.webp";
+import iceCreamVanilla from "../assets/img/vanilla.webp";
+import iceCreamStrawberry from "../assets/img/strawberry.webp";
+import iceCreamChocolate from "../assets/img/coklat.webp";
+import nasiAyamPenyet from "../assets/img/penyet.webp";
+import nasiAyamGeprek from "../assets/img/geprek.webp";
+import beefBurger from "../assets/img/beefburger.webp";
+import cheeseBurger from "../assets/img/cheeseburger.webp";
+import chickenBurger from "../assets/img/chickenburger.webp";
+import mieAyam from "../assets/img/mieayam.webp";
+import mieGoreng from "../assets/img/miegoreng.webp";
+import mieAyamBakso from "../assets/img/ayambakso.webp";
+import mieBaksoUrat from "../assets/img/baksourat.webp";
 
 type ItemType = {
   id: number;
@@ -38,7 +51,7 @@ const initialState: ItemType[] = [
     id: 3,
     name: "Ice Cream Oreo",
     price: 12000,
-    img: "https://i.postimg.cc/pd9ck1PM/Oreo-Cookies-And-Cream-Ice-Cream-No-Churn.jpg",
+    img: iceCreamOreo,
     qty: 1,
     type: "ice cream",
   },
@@ -54,7 +67,7 @@ const initialState: ItemType[] = [
     id: 5,
     name: "Mie Ayam",
     price: 15000,
-    img: "https://i.postimg.cc/0N70HgKm/Mie-Ayam.jpg",
+    img: mieAyam,
     qty: 1,
     type: "noodle",
   },
@@ -62,7 +75,7 @@ const initialState: ItemType[] = [
     id: 6,
     name: "Beef Burger",
     price: 15000,
-    img: "https://i.postimg.cc/d31PnVf5/Beef-Burger.jpg",
+    img: beefBurger,
     qty: 1,
     type: "fast food",
   },
@@ -70,15 +83,7 @@ const initialState: ItemType[] = [
     id: 7,
     name: "Cheese Burger",
     price: 13000,
-    img: "https://i.postimg.cc/fLRrQgvL/Cheese-Burger.jpg",
-    qty: 1,
-    type: "fast food",
-  },
-  {
-    id: 8,
-    name: "Chicken Burger Deluxe",
-    price: 20000,
-    img: "https://i.postimg.cc/gkF1n4zM/Chicken-Burger-Deluxe.jpg",
+    img: cheeseBurger,
     qty: 1,
     type: "fast food",
   },
@@ -86,7 +91,7 @@ const initialState: ItemType[] = [
     id: 9,
     name: "Chicken Burger",
     price: 15000,
-    img: "https://i.postimg.cc/1XZM5CGw/Chicken-Burger.jpg",
+    img: chickenBurger,
     qty: 1,
     type: "fast food",
   },
@@ -102,7 +107,7 @@ const initialState: ItemType[] = [
     id: 11,
     name: "Nasi Ayam Geprek",
     price: 15000,
-    img: "https://i.postimg.cc/bJC87BKY/Ayam-Geprek-1.jpg",
+    img: nasiAyamGeprek,
     qty: 1,
     type: "rice",
   },
@@ -110,7 +115,7 @@ const initialState: ItemType[] = [
     id: 12,
     name: "Nasi Ayam Penyet",
     price: 15000,
-    img: "https://i.postimg.cc/9Mn58q7r/Resep-Ayam-Penyet-Sederhana-Pedesnya-Nampol.jpg",
+    img: nasiAyamPenyet,
     qty: 1,
     type: "rice",
   },
@@ -118,7 +123,7 @@ const initialState: ItemType[] = [
     id: 13,
     name: "Mie Goreng",
     price: 12000,
-    img: "https://i.postimg.cc/L4P2CNxS/Mie-Goreng-Aceh.jpg",
+    img: mieGoreng,
     qty: 1,
     type: "noodle",
   },
@@ -126,7 +131,7 @@ const initialState: ItemType[] = [
     id: 14,
     name: "Mie Ayam Bakso",
     price: 18000,
-    img: "https://i.postimg.cc/cJ6rrf0J/Mie-ayam-1.jpg",
+    img: mieAyamBakso,
     qty: 1,
     type: "noodle",
   },
@@ -134,7 +139,7 @@ const initialState: ItemType[] = [
     id: 15,
     name: "Mie Bakso Urat",
     price: 20000,
-    img: "https://i.postimg.cc/rFBkSW1m/Bakso-Urat.jpg",
+    img: mieBaksoUrat,
     qty: 1,
     type: "noodle",
   },
@@ -142,7 +147,7 @@ const initialState: ItemType[] = [
     id: 16,
     name: "Ice Cream Coklat",
     price: 8000,
-    img: "https://i.postimg.cc/q78yk8LC/Earl-Grey-chocolate-ice-cream.jpg",
+    img: iceCreamChocolate,
     qty: 1,
     type: "ice cream",
   },
@@ -150,7 +155,7 @@ const initialState: ItemType[] = [
     id: 17,
     name: "Ice Cream Vanila",
     price: 8000,
-    img: "https://i.postimg.cc/FK8rnqcy/Premium-Photo-Female-s-hand-holding-vanilla-milk-soft-serve-ice-cream-cone-on-sunny-day.jpg",
+    img: iceCreamVanilla,
     qty: 1,
     type: "ice cream",
   },
@@ -158,7 +163,7 @@ const initialState: ItemType[] = [
     id: 18,
     name: "Ice Cream Strawberry",
     price: 8000,
-    img: "https://i.postimg.cc/Mpggk8Pp/Homemade-Strawberry-Ice-Cream-Oh-Sweet-Basil.jpg",
+    img: iceCreamStrawberry,
     qty: 1,
     type: "ice cream",
   },
