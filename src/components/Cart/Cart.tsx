@@ -27,7 +27,7 @@ const Cart = () => {
         Swal.fire("No Items in the cart", "", "error");
       } else if (result.isConfirmed) {
         dispatch(cartActions.resetCart());
-        Swal.fire("Success!", "", "success");
+        Swal.fire("Thanks For Buying!", "", "success");
       }
     });
   };

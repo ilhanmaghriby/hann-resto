@@ -30,6 +30,7 @@ const FunCart = ({ id, img, name, price, qty, type }: ItemType) => {
       icon: "success",
     });
   };
+
   function formatRupiah(angka: number) {
     const formatter = new Intl.NumberFormat("id-ID", {
       style: "currency",
@@ -39,12 +40,15 @@ const FunCart = ({ id, img, name, price, qty, type }: ItemType) => {
 
     return formatter.format(angka);
   }
+
   return (
     <div
       key={id}
-      className="max-w-xs mr-8 md:mr-0  mt-6 bg-white border border-gray-200 rounded-lg shadow"
+      className="max-w-xs mr-8 md:mr-0 mt-6 bg-white border border-gray-200 rounded-lg shadow overflow-hidden"
     >
-      <img className="rounded-t-lg max-h-80 w-full" src={img} alt={name} />
+      <div className="w-full h-64 overflow-hidden">
+        <img className="w-full h-full object-cover" src={img} alt={name} />
+      </div>
       <div className="p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {name}
@@ -54,7 +58,7 @@ const FunCart = ({ id, img, name, price, qty, type }: ItemType) => {
         </p>
         <button
           onClick={addHandler}
-          className="inline-flex items-center px-3 py-2 bg-[#42c2ff] hover:bg-[#85F4FF] text-sm font-medium text-center text-black  rounded-lg  "
+          className="inline-flex items-center px-3 py-2 bg-[#42c2ff] hover:bg-[#85F4FF] text-sm font-medium text-center text-black rounded-lg"
         >
           Add To Cart
           <div className="ml-2">
