@@ -24,7 +24,7 @@ const CardList = ({ typeFilter }: CardProps) => {
   const filteredItems = filterItemsByType(typeFilter);
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-4 mb-10">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-4 mb-10 mr-4">
       {filteredItems.map((item: CartType) => {
         return (
           <FunCart

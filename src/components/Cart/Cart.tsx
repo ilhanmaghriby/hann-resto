@@ -50,7 +50,7 @@ const Cart = () => {
           Total Price : {formatRupiah(totalPrice)}
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-4 ml-28 md:ml-32 md:mr-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-4 ml-28 md:ml-32 md:mr-12 mr-4">
         {cartItems.map((item: CartType) => {
           return (
             <CartProduct
@@ -69,10 +69,10 @@ const Cart = () => {
         <div className="ml-28 md:ml-32 mt-4">
           <button
             type="button"
-            className="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             onClick={alert}
           >
-            Buy now
+            Buy Now
           </button>
         </div>
       )}
