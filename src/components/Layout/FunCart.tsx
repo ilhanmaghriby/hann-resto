@@ -39,11 +39,7 @@ const FunCart = ({ id, img, name, price, qty, type }: ItemType) => {
       key={id}
       className="max-w-xs mr-8 md:mr-0  mt-6 bg-white border border-gray-200 rounded-lg shadow"
     >
-      <img
-        className="rounded-t-lg max-h-80 w-full"
-        src={img}
-        alt="double burger"
-      />
+      <img className="rounded-t-lg max-h-80 w-full" src={img} alt={name} />
       <div className="p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {name}

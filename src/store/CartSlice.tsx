@@ -1,4 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import nasiGorengKampung from "../assets/img/nasi-goreng-kampung.jpeg";
+import nasiGoreng from "../assets/img/nasi-goreng.jpeg";
+import doubleBurger from "../assets/img/double-burger.jpeg";
+import beefBurgerDeluxe from "../assets/img/beef-burger.jpeg";
 
 type ItemType = {
   id: number;
@@ -18,7 +22,7 @@ const initialState: ItemType[] = [
     id: 1,
     name: "Double Burger",
     price: 20000,
-    img: "https://i.postimg.cc/MHyPfQtN/double-burger.jpg",
+    img: doubleBurger,
     qty: 1,
     type: "fast food",
   },
@@ -26,7 +30,7 @@ const initialState: ItemType[] = [
     id: 2,
     name: "Beef Burger Deluxe",
     price: 20000,
-    img: "https://i.postimg.cc/FzgdbG2y/Beef-Burger-Deluxe.jpg",
+    img: beefBurgerDeluxe,
     qty: 1,
     type: "fast food",
   },
@@ -42,7 +46,7 @@ const initialState: ItemType[] = [
     id: 4,
     name: "Nasi Goreng",
     price: 12000,
-    img: "https://i.postimg.cc/Vk16BjRg/Nasi-Goreng-Indonesian-Fried-Rice-Sugar-Spice-More.jpg",
+    img: nasiGoreng,
     qty: 1,
     type: "rice",
   },
@@ -90,7 +94,7 @@ const initialState: ItemType[] = [
     id: 10,
     name: "Nasi Goreng Kampung",
     price: 12000,
-    img: "https://i.postimg.cc/vHSMqk50/Nasi-Goreng-Kampung-1.jpg",
+    img: nasiGorengKampung,
     qty: 1,
     type: "rice",
   },
