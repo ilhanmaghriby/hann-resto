@@ -14,6 +14,7 @@ type ItemType = {
 
 const FunCart = ({ id, img, name, price, qty, type }: ItemType) => {
   const dispatch = useDispatch();
+
   const addHandler = () => {
     dispatch(
       cartActions.addToCart({
@@ -31,7 +32,7 @@ const FunCart = ({ id, img, name, price, qty, type }: ItemType) => {
     });
   };
 
-  function formatRupiah(angka: number) {
+  const formatRupiah = (angka: number) => {
     const formatter = new Intl.NumberFormat("id-ID", {
       style: "currency",
       currency: "IDR",
@@ -39,31 +40,24 @@ const FunCart = ({ id, img, name, price, qty, type }: ItemType) => {
     });
 
     return formatter.format(angka);
-  }
+  };
 
   return (
-    <div
-      key={id}
-      className="max-w-xs mr-8 md:mr-0 mt-6 bg-white border border-gray-200 rounded-lg shadow overflow-hidden"
-    >
+    <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 ">
       <div className="w-full h-64 overflow-hidden">
         <img className="w-full h-full object-cover" src={img} alt={name} />
       </div>
       <div className="p-5">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          {name}
-        </h5>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <h5 className="mb-2 text-2xl font-bold text-gray-900">{name}</h5>
+        <p className="mb-4 text-gray-700 font-semibold">
           {formatRupiah(price)}
         </p>
         <button
           onClick={addHandler}
-          className="inline-flex items-center px-3 py-2 bg-[#42c2ff] hover:bg-[#85F4FF] text-sm font-medium text-center text-black rounded-lg"
+          className="w-full flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out"
         >
-          Add To Cart
-          <div className="ml-2">
-            <FaCartPlus />
-          </div>
+          <span>Add To Cart</span>
+          <FaCartPlus className="ml-2" />
         </button>
       </div>
     </div>

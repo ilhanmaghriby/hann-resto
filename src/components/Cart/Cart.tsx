@@ -44,13 +44,13 @@ const Cart = () => {
 
   return (
     <section className=" mt-10 mb-20">
-      <div className="text-center ml-14 lg:ml-24">
+      <div className="text-center ml-14 lg:ml-24 mb-8">
         <h1 className="font-bold text-3xl">Your Cart</h1>
         <p className="text-gray-500">
           Total Price : {formatRupiah(totalPrice)}
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-4 ml-28 md:ml-32">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-4 ml-28 md:ml-32 md:mr-12">
         {cartItems.map((item: CartType) => {
           return (
             <CartProduct
@@ -69,7 +69,7 @@ const Cart = () => {
         <div className="ml-28 md:ml-32 mt-4">
           <button
             type="button"
-            className="text-black bg-[#42c2ff] hover:bg-[#85F4FF] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             onClick={alert}
           >
             Buy now

@@ -14,7 +14,7 @@ type CartType = {
 const CartProduct = ({ id, img, name, qty, price }: CartType) => {
   const dispatch = useDispatch();
 
-  const removeHandler = () => {
+  const handleRemove = () => {
     Swal.fire({
       title: "Do you want to remove the item?",
       showCancelButton: true,
@@ -26,7 +26,8 @@ const CartProduct = ({ id, img, name, qty, price }: CartType) => {
       }
     });
   };
-  function formatRupiah(angka: number) {
+
+  const formatRupiah = (angka: number) => {
     const formatter = new Intl.NumberFormat("id-ID", {
       style: "currency",
       currency: "IDR",
@@ -34,37 +35,23 @@ const CartProduct = ({ id, img, name, qty, price }: CartType) => {
     });
 
     return formatter.format(angka);
-  }
-  return (
-    <div
-      key={id}
-      className="max-w-xs mr-8 md:mr-0  mt-6 bg-white border border-gray-200 rounded-lg shadow"
-    >
-      {/* List Card */}
-      <img
-        className="rounded-t-lg max-h-80 w-full"
-        src={img}
-        alt="double burger"
-      />
-      <div className="p-5">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          {name}
-        </h5>
+  };
 
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          {qty} Pcs
-        </p>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+  return (
+    <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+      <img className="w-full h-48 object-cover" src={img} alt={name} />
+      <div className="p-4">
+        <h5 className="text-xl font-bold mb-2 text-gray-900">{name}</h5>
+        <p className="text-gray-700 mb-2">{qty} Pcs</p>
+        <p className="text-gray-700 font-semibold mb-4">
           {formatRupiah(price)}
         </p>
         <button
-          onClick={removeHandler}
-          className="inline-flex items-center px-3 py-2 bg-red-500 hover:bg-red-400 text-sm font-medium text-center text-black  rounded-lg  "
+          onClick={handleRemove}
+          className="w-full flex items-center justify-center bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out"
         >
-          Delete From Cart
-          <div className="ml-2">
-            <FaTrash />
-          </div>
+          <span>Delete From Cart</span>
+          <FaTrash className="ml-2" />
         </button>
       </div>
     </div>
