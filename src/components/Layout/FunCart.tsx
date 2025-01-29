@@ -1,6 +1,7 @@
 import { FaCartPlus } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/CartSlice";
+import Swal from "sweetalert2";
 
 type ItemType = {
   id: number;
@@ -24,6 +25,10 @@ const FunCart = ({ id, img, name, price, qty, type }: ItemType) => {
         type,
       })
     );
+    Swal.fire({
+      title: "Added to Cart!",
+      icon: "success",
+    });
   };
   function formatRupiah(angka: number) {
     const formatter = new Intl.NumberFormat("id-ID", {
