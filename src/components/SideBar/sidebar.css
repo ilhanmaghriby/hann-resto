@@ -1,3 +1,14 @@
+:root {
+  --sidebar-color: #1e1e2f;
+  --text-color: #ffffff;
+  --primary-color: #ffb703;
+  --primary-color-light: #3e3e55;
+  --toggle-color: #888;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
 /* ===== Sidebar ===== */
 .sidebar {
   position: fixed;
@@ -72,12 +83,14 @@ header .image-text .name {
   margin-top: 2px;
   font-size: 18px;
   font-weight: 600;
+  color: var(--text-color);
 }
 
 header .image-text .profession {
   font-size: 16px;
   margin-top: -2px;
   display: block;
+  color: var(--text-color);
 }
 
 .sidebar header .image {
